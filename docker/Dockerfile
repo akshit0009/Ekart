@@ -6,6 +6,8 @@ ENV APP_HOME /usr/src/app
 
 COPY target/shopping-cart-0.0.1-SNAPSHOT.jar $APP_HOME/app.jar
 
+RUN ls -alh $APP_HOME
+
 WORKDIR $APP_HOME
 
 ENTRYPOINT exec java -jar app.jar
